@@ -11,9 +11,10 @@ import SwiftUI
 struct AVideoApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                VideoHomeView()
-            }
+//            NavigationView {
+//                VideoHomeView()
+//            }
+            ContentView()
         }
     }
 }

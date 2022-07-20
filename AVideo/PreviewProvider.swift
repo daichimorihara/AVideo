@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import AVFoundation
 
 extension PreviewProvider {
     
@@ -22,6 +23,8 @@ class DeveloperPreview {
     private init() {}
     
     let video = Video(id: 1448735, url: "https://www.pexels.com/video/video-of-forest-1448735/", image: "https://images.pexels.com/videos/1448735/free-video-1448735.jpg?fit=crop&w=1200&h=630&auto=compress&cs=tinysrgb", duration: 31, user: User(id: 873, name: "David Paul", url: "https://www.pexels.com/@digitech"), videoFiles: [VideoFile(id: 33, quality: "", fileType: "", link: "https://player.vimeo.com/external/291648067.sd.mp4?s=7f9ee1f8ec1e5376027e4a6d1d05d5738b2fbb29&profile_id=164&oauth2_token_id=57447761")])
+    
+    let reel = Reel(player: AVPlayer(), mediaFile: MediaFile(url: "", title: "fe"))
 }
 //{
 //    "id": 1448735,
