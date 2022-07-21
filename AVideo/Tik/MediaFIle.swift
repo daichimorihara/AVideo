@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 struct MediaFile: Identifiable {
     var id = UUID().uuidString
@@ -22,3 +23,6 @@ var filesJSON = [
     MediaFile(url: "Reel5", title: "I've been creating more vertical 30 second content"),
     MediaFile(url: "Reel6", title: "The brand new Apple Tower Theater opens")
 ]
+
+let pathEx = Bundle.main.path(forResource: "Reel1", ofType: "mp4") ?? ""
+let reelEx = Reel(player: AVPlayer(url: URL(fileURLWithPath: pathEx)), mediaFile: MediaFile(url: "Reel1", title: "Apple AirTag....."))

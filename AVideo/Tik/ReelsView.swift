@@ -6,13 +6,13 @@
 //
 
 import SwiftUI
-import CoreMIDI
+
 import AVFoundation
 
 struct ReelsView: View {
     @State private var currentReel = ""
     
-    @State private var reels = filesJSON.map { item -> Reel in
+    private var reels = filesJSON.map { item -> Reel in
         let url = Bundle.main.path(forResource: item.url, ofType: "mp4") ?? ""
         let player = AVPlayer(url: URL(fileURLWithPath: url))
         return Reel(player: player, mediaFile: item)
@@ -22,12 +22,16 @@ struct ReelsView: View {
         GeometryReader { geometry in
             let size = geometry.size
             TabView(selection: $currentReel) {
-                ForEach($reels) { $reel in
-                    ReelsPlayer(reel: $reel, currentReel: $currentReel)
-                    .frame(width: size.width)
-                    .background(.red)
-                    .rotationEffect(.init(degrees: -90))
-
+                ForEach(reels) { reel in
+//                    ReelsPlayer(reel: $reel, currentReel: $currentReel)
+//                    .frame(width: size.width)
+//                    .background(.red)
+//                    .rotationEffect(.init(degrees: -90))
+                    ReelsPlayer(currentReel: $currentReel, reel: reel)
+                        .frame(width: size.width)
+                        .tag(reel.id)
+                        .rotationEffect(.init(degrees: -90))
+                        //.ignoresSafeArea(.all, edges: .top)
                 }
             }
             .rotationEffect(.init(degrees: 90))

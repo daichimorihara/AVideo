@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ReelsPlayer: View {
-    @Binding var reel: Reel
+    //@Binding var reel: Reel
+    //@Binding var currentReel: String
     @Binding var currentReel: String
- 
+    let reel: Reel
     
     var body: some View {
         ZStack {
@@ -18,30 +19,33 @@ struct ReelsPlayer: View {
                 CustomVideoPlayer(player: player)
                 
                 GeometryReader { geometry -> Color in
-                    
                     let minY = geometry.frame(in: .global).minY
-
+                    
                     let size = geometry.size
                     
                     DispatchQueue.main.async {
-                        if -minY < (size.height / 2) && minY < (size.height / 2) && currentReel == reel.id{
+                        if -minY < (size.height/2) && minY < (size.height/2) && currentReel == reel.id {
                             player.play()
-                        }
-                        else{
+                        } else {
+                            player.seek(to: .zero)
                             player.pause()
                         }
+                                
                     }
-                    
-                    return Color.clear
+                    return Color.clear  
                 }
             }
-
+        }
+        .onDisappear {
+            if let player = reel.player {
+                player.pause()
+            }
         }
     }
 }
 
 struct ReelsPlayer_Previews: PreviewProvider {
     static var previews: some View {
-        ReelsPlayer(reel: .constant(Reel(mediaFile: MediaFile(url: "", title: ""))), currentReel: .constant("eg"))
+        ReelsPlayer(currentReel: .constant(""), reel: reelEx)
     }
 }

@@ -12,6 +12,12 @@
 		4209B6852887DFB400FABCE3 /* ReelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209B6842887DFB400FABCE3 /* ReelsView.swift */; };
 		4209B6872887E8AC00FABCE3 /* CustomVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209B6862887E8AC00FABCE3 /* CustomVideoPlayer.swift */; };
 		4209B6892888081E00FABCE3 /* ReelsPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209B6882888081E00FABCE3 /* ReelsPlayer.swift */; };
+		424BBF252888F2E9006C52CB /* Reel1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4209B68B288816B400FABCE3 /* Reel1.mp4 */; };
+		424BBF262888F2E9006C52CB /* Reel2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4209B68C288816B500FABCE3 /* Reel2.mp4 */; };
+		424BBF272888F2E9006C52CB /* Reel3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4209B68F288816B500FABCE3 /* Reel3.mp4 */; };
+		424BBF282888F2E9006C52CB /* Reel4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4209B68A288816B400FABCE3 /* Reel4.mp4 */; };
+		424BBF292888F2E9006C52CB /* Reel5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4209B68D288816B500FABCE3 /* Reel5.mp4 */; };
+		424BBF2A2888F2E9006C52CB /* Reel6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4209B68E288816B500FABCE3 /* Reel6.mp4 */; };
 		425D6C5328856B2100C7F3B7 /* AVideoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425D6C5228856B2100C7F3B7 /* AVideoApp.swift */; };
 		425D6C5528856B2100C7F3B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425D6C5428856B2100C7F3B7 /* ContentView.swift */; };
 		425D6C5728856B2200C7F3B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 425D6C5628856B2200C7F3B7 /* Assets.xcassets */; };
@@ -198,6 +204,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				424BBF252888F2E9006C52CB /* Reel1.mp4 in Resources */,
+				424BBF262888F2E9006C52CB /* Reel2.mp4 in Resources */,
+				424BBF272888F2E9006C52CB /* Reel3.mp4 in Resources */,
+				424BBF282888F2E9006C52CB /* Reel4.mp4 in Resources */,
+				424BBF292888F2E9006C52CB /* Reel5.mp4 in Resources */,
+				424BBF2A2888F2E9006C52CB /* Reel6.mp4 in Resources */,
 				425D6C5A28856B2200C7F3B7 /* Preview Assets.xcassets in Resources */,
 				425D6C6E28856B5E00C7F3B7 /* data.json in Resources */,
 				425D6C5728856B2200C7F3B7 /* Assets.xcassets in Resources */,
